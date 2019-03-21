@@ -33,9 +33,13 @@ const Search = ({ submit, onChangeText, loading }) => {
       <SearchContainer>
         {loading ? <CustomActivity hidesWhenStopped={loading}  size={25} color="#575757" /> : <CustomIcon onPress={submit} name="search" size={25} color="#575757" />}
         <Input
-          keyboardType="web-search"
+          keyboardType="url"
           placeholder="Paste your innocent link here ..."
           placeholderTextColor="#4d4d4d"
+          multiline={false}
+          blurOnSubmit={true}
+          selectTextOnFocus={true}
+          selectionColor="#ff9900"
           onSubmitEditing={submit}
           onChangeText={onChangeText}
         />
