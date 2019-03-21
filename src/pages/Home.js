@@ -7,7 +7,7 @@ import Search from '../components/Search'
 import Buttons from '../components/Buttons'
 
 const ViewContainer = styled.ScrollView`
-  background-color: #090909;
+  background-color: #0f0f0f;
   flex: 1;
 `
 
