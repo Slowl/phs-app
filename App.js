@@ -6,21 +6,21 @@ import WebBrowser from './src/pages/WebBrowser'
 import About from './src/pages/About'
 
 const TabNavigator = createBottomTabNavigator({
-  Downloader: Home,
+  Home: Home,
   Pornhub: WebBrowser,
   About: About,
-},   {
+  }, {
     defaultNavigationOptions: ({ navigation }) => ({
       tabBarIcon: ({ focused, horizontal, tintColor }) => {
         const { routeName } = navigation.state;
         let IconComponent = Icon;
         let iconName;
-        if (routeName === 'Downloader') {
-          iconName = `download`;
+        if (routeName === 'Home') {
+          iconName = `home`;
         } else if (routeName === 'Pornhub') {
-          iconName = `film`;
+          iconName = `globe`;
         } else if (routeName === 'About') {
-          iconName = `info`;
+          iconName = `help-circle`;
         }
 
         return <IconComponent name={iconName} size={20} color={tintColor} />;
@@ -30,6 +30,7 @@ const TabNavigator = createBottomTabNavigator({
       activeTintColor: '#ff9900',
       // activeBackgroundColor: '#161414',
       inactiveTintColor: '#3b3a3a',
+      showLabel:false,
       style: {
         backgroundColor: '#000000',
         height: 65,
