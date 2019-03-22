@@ -1,6 +1,7 @@
 import React from 'react'
 import { View, ScrollView, Text, Keyboard, TouchableWithoutFeedback } from 'react-native'
 import styled from 'styled-components'
+import SplashScreen from 'react-native-splash-screen'
 
 import Title from '../components/Title'
 import Search from '../components/Search'
@@ -36,6 +37,12 @@ class Home extends React.Component {
     data: '',
     loading: false,
     error: false,
+  }
+
+  componentDidMount(){
+    setTimeout(() => {
+     SplashScreen.hide()
+   }, 500)
   }
 
   SearchFunc = () => {
