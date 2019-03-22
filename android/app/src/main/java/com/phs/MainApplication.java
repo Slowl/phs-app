@@ -1,4 +1,4 @@
-package com.phsnative;
+package com.phs;
 
 import android.app.Application;
 
