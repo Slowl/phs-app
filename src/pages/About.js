@@ -70,8 +70,8 @@ const About = () => {
           </TextCustom>
           <TitleContainer><TextTitle>The Creator ?</TextTitle></TitleContainer>
           <TextCustom>
-            {`That's the fabulous and magnificent guy named Hedi.
-Don't hesite to contact me or ask me any questions !
+            {`That's the fabulous and magnificent Hedi.
+Don't hesite to contact him or ask him any questions.
 `}
           </TextCustom>
           <ContactView>
