@@ -26,6 +26,7 @@ const TabNavigator = createBottomTabNavigator({
         return <IconComponent name={iconName} size={20} color={tintColor} />;
       },
     }),
+    lazy: false,
     tabBarOptions: {
       activeTintColor: '#ff9900',
       // activeBackgroundColor: '#161414',
@@ -33,7 +34,7 @@ const TabNavigator = createBottomTabNavigator({
       showLabel:false,
       style: {
         backgroundColor: '#000000',
-        height: 65,
+        height: 55,
       },
       tabStyle: {
         padding: 10,
