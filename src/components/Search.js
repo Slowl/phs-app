@@ -1,7 +1,7 @@
 import React from 'react'
-import { View, Text, TextInput, Keyboard, ActivityIndicator } from 'react-native'
+import { View, Text, TextInput, ActivityIndicator } from 'react-native'
 import styled from 'styled-components'
-import Icon from 'react-native-vector-icons/Feather';
+import Icon from 'react-native-vector-icons/Feather'
 
 const SearchContainer = styled.View`
   justify-content: space-between;
@@ -12,7 +12,6 @@ const SearchContainer = styled.View`
   background-color: #1c1c1c;
   border-radius: 30px;
 `
-
 const Input = styled.TextInput`
   padding: 15px;
   border-radius: 30px;
@@ -20,7 +19,6 @@ const Input = styled.TextInput`
   font-size: 16px;
   color: white;
 `
-
 const CustomIcon = styled(Icon)`
   padding: 15px 15px 15px 0px;
 `

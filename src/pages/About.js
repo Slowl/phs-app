@@ -1,23 +1,20 @@
 import React from 'react'
 import { View, ScrollView, Text, Linking } from 'react-native'
 import styled from 'styled-components'
-import Icon from 'react-native-vector-icons/Feather';
+import Icon from 'react-native-vector-icons/Feather'
 
 const ViewContainer = styled.ScrollView`
   background-color: #0f0f0f;
   flex: 1;
 `
-
 const Title = styled.View`
   margin-top: 80px;
 `
-
 const TitleText = styled.Text`
   font-size: 48px;
   color: white;
   text-align: center;
 `
-
 const TextContainer = styled.View`
   padding: 30px;
 `
@@ -25,11 +22,9 @@ const TextCustom = styled.Text`
   color: white;
   font-size: 15px;
 `
-
 const TitleContainer = styled.View`
   padding: 20px 0 10px 0;
 `
-
 const TextTitle = styled.Text`
   color: #e78a00;
   font-size: 28px;

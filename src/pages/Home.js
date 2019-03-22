@@ -64,7 +64,6 @@ class Home extends React.Component {
     .catch(error => {
       this.setState({ loading: false })
       this.setState({error: true})
-      console.log(error)
     })
   }
 

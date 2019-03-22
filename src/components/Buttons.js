@@ -1,8 +1,8 @@
 import React from 'react'
 import { View, Text, TouchableOpacity, PermissionsAndroid, ToastAndroid } from 'react-native'
 import styled from 'styled-components'
-
 import RNFetchBlob from 'rn-fetch-blob'
+
 const { config, fs } = RNFetchBlob
 
 const ButtonsContainer = styled.View`
@@ -12,13 +12,11 @@ const ButtonsContainer = styled.View`
   margin-top: 60px;
 `
 const CustomButton = styled.TouchableOpacity`
-  color: white;
   width: 25%;
   margin: 5px;
   background-color: #0082cb;
   padding: 20px 0px 20px 0px;
 `
-
 const CustomText = styled.Text`
   color: white;
   text-align: center;
@@ -79,7 +77,6 @@ const donwloadFile = async () => {
           0,
           50,
         );
-        console.error(error);
       });
 
     } else {
@@ -92,7 +89,13 @@ const donwloadFile = async () => {
       );
     }
   } catch (err) {
-    console.warn(err);
+    ToastAndroid.showWithGravityAndOffset(
+      'An error occured, please try again.',
+      ToastAndroid.LONG,
+      ToastAndroid.BOTTOM,
+      0,
+      50,
+    );
   }
 }
 
