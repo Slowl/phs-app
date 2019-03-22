@@ -21,15 +21,15 @@ const NavBar = styled.View`
   background-color: #2a2a2e;
 `
 const NavButtonsBack = styled.TouchableOpacity`
-  padding: 20px;
+  padding: 15px;
   background-color: #2a2a2e;
 `
 const NavButtonsForw = styled.TouchableOpacity`
-  padding: 20px;
+  padding: 15px;
   background-color: #2a2a2e;
 `
 const UrlContainer = styled.TouchableOpacity`
-  padding: 20px;
+  padding: 15px;
   background-color: #2f2f34;
   min-width: 65%;
   max-width: 65%;
