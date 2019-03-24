@@ -1,9 +1,10 @@
 import React from 'react'
 import { View, Text, TouchableOpacity, Clipboard, ToastAndroid } from 'react-native'
 import styled from 'styled-components'
-import { WebView } from 'react-native-webview'
+// import { WebView } from 'react-native-webview'
+import WebView from 'react-native-android-fullscreen-webview-video'
 import Icon from 'react-native-vector-icons/Feather'
-const WEBVIEW_REF = "WEBVIEW_REF";
+const WEBVIEW_REF = "WEBVIEW_REF"
 import ProgressBar from 'react-native-progress/Bar'
 
 const WebViewWrapper = styled.View`
