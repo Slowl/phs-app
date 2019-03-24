@@ -2,6 +2,7 @@ import React from 'react'
 import { View, ScrollView, Text, Linking } from 'react-native'
 import styled from 'styled-components'
 import Icon from 'react-native-vector-icons/Feather'
+import IconFA from 'react-native-vector-icons/FontAwesome'
 
 const ViewContainer = styled.ScrollView`
   background-color: #0f0f0f;
@@ -43,6 +44,10 @@ const CustomIcon = styled(Icon)`
   padding: 20px;
   margin: 20px;
 `
+const PaypalIcon = styled(IconFA)`
+  padding: 20px;
+  margin: 20px;
+`
 
 const Covfefe = styled.TouchableOpacity`
   margin: 25px auto 0;
@@ -51,6 +56,14 @@ const Covfefe = styled.TouchableOpacity`
   background-color: #e78a00;
   border-radius: 10px;
 `
+const Paypal = styled.TouchableOpacity`
+  margin: 15px auto 0;
+  padding: 10px;
+  width: 70%;
+  background-color: #005ea6;
+  border-radius: 10px;
+`
+
 const LinkSupport = styled.Text`
   color: white;
   text-align: center;
@@ -104,6 +117,12 @@ You can also support me if you want !
               {" "}Buy me a coffee !
             </LinkSupport>
           </Covfefe>
+          <Paypal opacity={0.8} onPress={() => Linking.openURL('https://www.paypal.me/hedikch')}>
+            <LinkSupport>
+              <PaypalIcon name="paypal" size={20} color="white" />
+              {"   "}Support me !
+            </LinkSupport>
+          </Paypal>
             </TextContainer>
       </Title>
     </ViewContainer>
