@@ -8,7 +8,7 @@ const ViewContainer = styled.ScrollView`
   flex: 1;
 `
 const Title = styled.View`
-  margin-top: 80px;
+  margin-top: 40px;
 `
 const TitleText = styled.Text`
   font-size: 48px;
@@ -44,6 +44,20 @@ const CustomIcon = styled(Icon)`
   margin: 20px;
 `
 
+const Covfefe = styled.TouchableOpacity`
+  margin: 25px auto 0;
+  padding: 10px;
+  width: 70%;
+  background-color: #e78a00;
+  border-radius: 10px;
+`
+const LinkSupport = styled.Text`
+  color: white;
+  text-align: center;
+  font-weight: 800;
+  font-size: 18px;
+`
+
 const About = () => {
 
   return (
@@ -67,6 +81,7 @@ const About = () => {
           <TextCustom>
             {`That's the fabulous and magnificent Hedi.
 Don't hesite to contact him or ask him any questions.
+You can also support me if you want !
 `}
           </TextCustom>
           <ContactView>
@@ -83,6 +98,12 @@ Don't hesite to contact him or ask him any questions.
               {"   "}contact@hedik.fr
             </Link>
           </ContactView>
+          <Covfefe opacity={0.8} onPress={() => Linking.openURL('https://www.buymeacoffee.com/hedik')}>
+            <LinkSupport>
+              <CustomIcon name="dollar-sign" size={20} color="white" />
+              {" "}Buy me a coffee !
+            </LinkSupport>
+          </Covfefe>
             </TextContainer>
       </Title>
     </ViewContainer>
