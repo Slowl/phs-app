@@ -26,23 +26,48 @@ const CustomActivity = styled(ActivityIndicator)`
   padding: 15px 15px 15px 0px;
 `
 
-const Search = ({ submit, onChangeText, loading }) => {
-  return (
-      <SearchContainer>
-        {loading ? <CustomActivity hidesWhenStopped={loading}  size={25} color="#575757" /> : <CustomIcon onPress={submit} name="search" size={25} color="#575757" />}
-        <Input
-          keyboardType="url"
-          placeholder="Paste your innocent link here ..."
-          placeholderTextColor="#4d4d4d"
-          multiline={false}
-          blurOnSubmit={true}
-          selectTextOnFocus={true}
-          selectionColor="#ff9900"
-          onSubmitEditing={submit}
-          onChangeText={onChangeText}
-        />
-      </SearchContainer>
-  )
+class Search extends React.Component<Props, State> {
+
+  static defaultProps = {
+    editable: true,
+  }
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      editable: !props.editable
+    };
+  }
+
+  componentDidMount() {
+    if (this.props.editable) {
+      setTimeout(() => {
+        this.setState({ editable: true })
+      }, 100)
+    }
+  }
+
+  render(){
+    const { editable } = this.state
+    const  { submit, loading, onChangeText } = this.props
+      return (
+        <SearchContainer>
+          {loading ? <CustomActivity hidesWhenStopped={loading}  size={25} color="#575757" /> : <CustomIcon onPress={submit} name="search" size={25} color="#575757" />}
+          <Input
+            keyboardType="default"
+            placeholder="Paste your innocent link here ..."
+            placeholderTextColor="#4d4d4d"
+            multiline={false}
+            editable={editable}
+            blurOnSubmit={true}
+            selectTextOnFocus={true}
+            selectionColor="#ff9900"
+            onSubmitEditing={submit}
+            onChangeText={onChangeText}
+          />
+        </SearchContainer>
+      )
+  }
 }
 
 export default Search
