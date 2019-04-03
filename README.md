@@ -6,7 +6,7 @@ The React Native version App of [PHS](https://phs-web.netlify.com/) for Android 
 
 # App Preview
 
-<img src="https://i.ibb.co/b5LmJsD/app.png" alt="homepage" />
-<img src="https://i.ibb.co/gMzZgzV/app-link.png" alt="linked" />
-<img src="https://i.ibb.co/NVDPcvM/browser.png" alt="browser" />
-<img src="https://i.ibb.co/1MFQWMp/about.png" alt="about" />
+<img src="https://i.ibb.co/b5LmJsD/app.png" width="30%" alt="homepage" />
+<img src="https://i.ibb.co/gMzZgzV/app-link.png" width="30%" alt="linked" />
+<img src="https://i.ibb.co/NVDPcvM/browser.png" width="30%" alt="browser" />
+<img src="https://i.ibb.co/1MFQWMp/about.png" width="30%" alt="about" />
