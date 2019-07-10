@@ -1,10 +1,11 @@
 import React from 'react'
 import { View, Text, TouchableOpacity, Clipboard, ToastAndroid } from 'react-native'
 import styled from 'styled-components'
-import { WebView } from 'react-native-webview'
-import Icon from 'react-native-vector-icons/Feather';
-const WEBVIEW_REF = "WEBVIEW_REF";
-import ProgressBar from 'react-native-progress/Bar';
+// import { WebView } from 'react-native-webview'
+import WebView from 'react-native-android-fullscreen-webview-video'
+import Icon from 'react-native-vector-icons/Feather'
+const WEBVIEW_REF = "WEBVIEW_REF"
+import ProgressBar from 'react-native-progress/Bar'
 
 const WebViewWrapper = styled.View`
   flex: 1;
@@ -21,15 +22,15 @@ const NavBar = styled.View`
   background-color: #2a2a2e;
 `
 const NavButtonsBack = styled.TouchableOpacity`
-  padding: 20px;
+  padding: 15px;
   background-color: #2a2a2e;
 `
 const NavButtonsForw = styled.TouchableOpacity`
-  padding: 20px;
+  padding: 15px;
   background-color: #2a2a2e;
 `
 const UrlContainer = styled.TouchableOpacity`
-  padding: 20px;
+  padding: 15px;
   background-color: #2f2f34;
   min-width: 65%;
   max-width: 65%;
@@ -58,14 +59,14 @@ class WebBrowser extends React.Component {
       canGoForward: navState.canGoForward,
       url: navState.url,
       loading: navState.loading
-    });
+    })
   }
 
   onBack() {
-    this.refs[WEBVIEW_REF].goBack();
+    this.refs[WEBVIEW_REF].goBack()
   }
   onForward() {
-    this.refs[WEBVIEW_REF].goForward();
+    this.refs[WEBVIEW_REF].goForward()
   }
 
   writeToClipboard = async () => {
@@ -113,7 +114,7 @@ class WebBrowser extends React.Component {
             </NavButtonsBack>
 
             <UrlContainer onPress={this.writeToClipboard}>
-              <TextUrl numberOfLines={ 1 }> {this.state.url} </TextUrl>
+              <TextUrl numberOfLines={1}> {this.state.url} </TextUrl>
             </UrlContainer>
 
             <NavButtonsForw

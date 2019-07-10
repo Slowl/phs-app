@@ -1,6 +1,6 @@
-import React from 'react';
-import { createBottomTabNavigator, createAppContainer } from 'react-navigation';
-import Icon from 'react-native-vector-icons/Feather';
+import React from 'react'
+import { createBottomTabNavigator, createAppContainer } from 'react-navigation'
+import Icon from 'react-native-vector-icons/Feather'
 import Home from './src/pages/Home'
 import WebBrowser from './src/pages/WebBrowser'
 import About from './src/pages/About'
@@ -13,17 +13,17 @@ const TabNavigator = createBottomTabNavigator({
     defaultNavigationOptions: ({ navigation }) => ({
       tabBarIcon: ({ focused, horizontal, tintColor }) => {
         const { routeName } = navigation.state;
-        let IconComponent = Icon;
+        let IconComponent = Icon
         let iconName;
         if (routeName === 'Home') {
-          iconName = `home`;
+          iconName = `home`
         } else if (routeName === 'Pornhub') {
-          iconName = `globe`;
+          iconName = `globe`
         } else if (routeName === 'About') {
-          iconName = `help-circle`;
+          iconName = `help-circle`
         }
 
-        return <IconComponent name={iconName} size={20} color={tintColor} />;
+        return <IconComponent name={iconName} size={20} color={tintColor} />
       },
     }),
     lazy: false,
@@ -47,4 +47,4 @@ const TabNavigator = createBottomTabNavigator({
   }
 )
 
-export default createAppContainer(TabNavigator);
+export default createAppContainer(TabNavigator)
