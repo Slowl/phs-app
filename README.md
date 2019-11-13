@@ -1,3 +1,6 @@
+
+Pornhub modified the way they display videos on their pages, therefore the app doesn't work for the moment
+
 # Pornhub Source Android App
 
 The React Native version App of [PHS](https://phs-web.netlify.com/) for Android phones (v5.0+).
